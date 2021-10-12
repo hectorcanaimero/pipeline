@@ -19,3 +19,4 @@ jobs:
         protocol: sftp
         port: 2299
         server-dir: /var/www/html/teste.condor.com.br/
+        dry-run: true
