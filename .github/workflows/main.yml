@@ -1,23 +1,18 @@
-name: CI-SFTP
 on: push
-  branches: [main]
-  workflow_dispatch:
-  
+name: 🚀 Deploy website on push
 jobs:
-  deploy-via-sftp:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    
+
     - name: 📂 Sync files
-      uses: wlixcc/SFTP-Deploy-Action@1.2.1
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: 173.230.137.242
-        username: root
-        ssh_private_key: ${{ secrets.ssh_private }}
-        password: @@Condor123#@!
-        protocol: ftps-legacy
-        port: 2299
-        local_path: ./
-        remote_path: /var/www/html/teste.condor.com.br/
+        server: ${{ secrets.ftp_host }}
+        username: ${{ secrets.ftp_user }}
+        password: ${{ secrets.ftp_password }}
+        protocol: ftps
+        port: 2299 # todo replace with your web hosts ftps port
