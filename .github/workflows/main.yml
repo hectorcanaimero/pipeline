@@ -16,4 +16,4 @@ jobs:
         username: 'root'
         password: '@@Condor123#@!'
         localPath: './'
-        remotePath: '/var/www/html/teste.condot.com.br/pipeline/'
+        remotePath: '/var/www/html/teste.condor.com.br/pipeline/'
