@@ -16,7 +16,7 @@ jobs:
         server: 173.230.137.242
         username: root
         password: @@Condor123#@!
-        protocol: sftp
+        protocol: ftps-legacy
         port: 2299
         server-dir: /var/www/html/teste.condor.com.br/
-        dry-run: true
+        dry-run: true 
