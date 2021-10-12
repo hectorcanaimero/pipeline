@@ -13,10 +13,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        # server: 173.230.137.242
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
+        server: 173.230.137.242
+        username: root
+        password: @@Condor123#@!
         protocol: ftps
         port: 2299
         server-dir: /var/www/html/teste.condor.com.br/
